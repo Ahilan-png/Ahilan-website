@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahilan's AI Chatbot</title>
+<style>
+body { font-family: Arial, sans-serif; text-align: center; background-color: #eef; padding: 50px; }
+textarea { width: 80%; height: 100px; font-size: 16px; margin-top: 20px; }
+button { padding: 10px 20px; font-size: 18px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; }
+button:hover { background-color: #43A047; }
+.answer { margin-top: 30px; background-color: white; border-radius: 10px; padding: 20px; width: 80%; margin-left: auto; margin-right: auto; }
+</style>
+</head>
+<body>
+<h1>🤖 Ahilan's AI Chatbot</h1>
+<form method="POST">
+  <textarea name="user_input" placeholder="Ask me anything..."></textarea><br>
+  <button type="submit">Ask</button>
+</form>
+
+{% if answer %}
+<div class="answer">
+  <h3>Response:</h3>
+  <p>{{ answer }}</p>
+</div>
+{% endif %}
+</body>
+</html>
