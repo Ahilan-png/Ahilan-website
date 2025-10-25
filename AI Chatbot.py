@@ -2,7 +2,8 @@ import google.generativeai as genai
 import tkinter as tk
 from tkinter import scrolledtext, messagebox
 
-genai.configure(api_key="AIzaSyBU-C46JDt-kuf7lxf5u2YbDI7JCC43Aoo")  
+import os
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
 model = genai.GenerativeModel("models/gemini-2.5-flash")
 
@@ -53,3 +54,4 @@ ask_button.pack(pady=10)
 
 
 window.mainloop()
+
